@@ -11,10 +11,10 @@ class MenuListViewModel: ViewModel() {
     val Tag:String = "MenuListViewModel"
 
     private val category = MutableLiveData<String>()
-    private val drinkSelected = MutableLiveData<DrinkDataInterface>()
+    private val drinkSelected = MutableLiveData<DrinkDataInterface?>()
     private val orderList = MutableLiveData<String>()
     val categoryLiveData: LiveData<String> get() = category
-    val drinkSelectedLiveData: LiveData<DrinkDataInterface> get() = drinkSelected
+    val drinkSelectedLiveData: LiveData<DrinkDataInterface?> get() = drinkSelected
     val orderListLiveData: LiveData<String> get() = orderList
 
     init {

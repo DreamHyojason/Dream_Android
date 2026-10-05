@@ -13,13 +13,13 @@ class FoodListViewModel : ViewModel() {
     val Tag: String = "FoodListViewModel"
 
     val category = MutableLiveData<String>()
-    private val foodSelected = MutableLiveData<FoodDataInterface>()
+    private val foodSelected = MutableLiveData<FoodDataInterface?>()
     private val foodSelectedList = MutableLiveData<ArrayList<String>>()
 
     private val orderFoodList = MutableLiveData<String>()
 
     private val setMenuCategory = MutableLiveData<String>()
-    private val setMenuSelected = MutableLiveData<setMenuDataInterface>()
+    private val setMenuSelected = MutableLiveData<setMenuDataInterface?>()
     private val setMenuSelectedList = MutableLiveData<ArrayList<String>>()
     private val orderingFood = MutableLiveData<OrderingFood>()
 
@@ -28,12 +28,12 @@ class FoodListViewModel : ViewModel() {
     val setMenuCategoryLiveData : LiveData<String> get() = setMenuCategory
 
     val orderingFoodLiveData : LiveData<OrderingFood> get() = orderingFood
-    val foodSelectedLiveData: LiveData<FoodDataInterface>
+    val foodSelectedLiveData: LiveData<FoodDataInterface?>
         get() = foodSelected
     val foodSelectedListLiveData: LiveData<ArrayList<String>>
         get() = foodSelectedList
 
-    val setMenuSelectedLiveData : LiveData<setMenuDataInterface> get() = setMenuSelected
+    val setMenuSelectedLiveData : LiveData<setMenuDataInterface?> get() = setMenuSelected
     val setMenuSelectedListLiveData : LiveData<ArrayList<String>> get() = setMenuSelectedList
 
     init {
